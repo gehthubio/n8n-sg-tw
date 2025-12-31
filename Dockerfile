@@ -4,7 +4,7 @@ USER root
 # Install your external modules
 
 RUN npm install -g npm@latest
-RUN npm install -g --unsafe-perm twilio @sendgrid/client @sendgrid/mail
+RUN npm install -g --unsafe-perm twilio @sendgrid/client @sendgrid/mail axios@1.7.7
 
 # Make global modules resolvable
 ENV NODE_PATH=/usr/local/lib/node_modules
