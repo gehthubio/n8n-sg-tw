@@ -2,11 +2,10 @@ FROM docker.n8n.io/n8nio/n8n:latest
 
 USER root
 
-# Install packages in n8n's main node_modules directory
-WORKDIR /usr/local/lib/node_modules/n8n
+# Install the required packages globally
+RUN npm install -g @sendgrid/mail @sendgrid/client twilio
 
-RUN npm install --omit=dev @sendgrid/mail @sendgrid/client twilio
+# Optional: Upgrade npm first if needed (some older guides do this)
+# RUN npm install -g npm@latest
 
 USER node
-
-WORKDIR /home/node
