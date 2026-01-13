@@ -26,7 +26,7 @@ RUN curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp \
 
 # Optional: Pre-install your favorite yt-dlp transcript community node
 # Uncomment one (or both) if you want it baked-in — otherwise install via n8n UI later
-# RUN npm install -g @rsraven/n8n-nodes-ytdlp-transcript
+RUN npm install -g @rsraven/n8n-nodes-ytdlp-transcript
 # RUN npm install -g @endcycles/n8n-nodes-youtube-transcript
 
 USER node
